@@ -17,20 +17,12 @@ const app = express();
 // backend/index.js or app.js
 
 
-// app.use(cors({
-//   // 'http://localhost:5173'
-//   origin: 'https://localhop.netlify.app/', // ✅ your frontend origin
-//   credentials: true               // ✅ allow cookies to be sent
-// }));
-const corsOptions = {
-  origin: "https://localhop.netlify.app",
-  credentials: true,
-  methods: "GET, POST, OPTIONS",
-  allowedHeaders: ["Content-Type", "Authorization"],
-};
+app.use(cors({
+  // 'http://localhost:5173'
+  origin: 'https://localhop.netlify.app/', // ✅ your frontend origin
+  credentials: true               // ✅ allow cookies to be sent
+}));
 
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
 
 
 // app.options('*', cors()); // Ensure preflight requests are handled
