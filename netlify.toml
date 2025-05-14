@@ -1,0 +1,6 @@
+[[headers]]
+for = "/auth/*"
+  [headers.values]
+  Access-Control-Allow-Origin = "https://localhop.netlify.app"
+  Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+  Access-Control-Allow-Headers = "Content-Type, Authorization"
