@@ -19,7 +19,8 @@ const app = express();
 
 app.use(cors({
   // 'http://localhost:5173'
-  origin: 'https://localhop.netlify.app/', // ✅ your frontend origin
+  // https://localhop.netlify.app/
+  origin: 'http://localhost:5173', // ✅ your frontend origin
   credentials: true               // ✅ allow cookies to be sent
 }));
 
@@ -59,3 +60,7 @@ app.use("/auth", authRoutes);
 const orderRoutes = require("./routes/order");
 app.use("/api/orders", orderRoutes);
 
+const shopRoutes=require("./routes/shop")
+app.use('/shop',shopRoutes)
+const productRoutes=require("./routes/product")
+app.use('/product',productRoutes)

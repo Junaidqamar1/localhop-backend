@@ -46,6 +46,9 @@ exports.getShopWithProducts = async (req, res) => {
   
   exports.getNearbyShops = async (req, res) => {
     const { lat, lng, radius = 5000 } = req.query; // radius in meters
+    console.log(lat)
+    console.log("hit success")
+
   
     if (!lat || !lng) {
       return res.status(400).json({ message: "Latitude and longitude are required." });
@@ -65,6 +68,7 @@ exports.getShopWithProducts = async (req, res) => {
       });
   
       res.status(200).json(shops);
+      console.log(shops)
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch nearby shops", error: error.message });
     }
