@@ -20,8 +20,8 @@ const app = express();
 app.use(cors({
   // 'http://localhost:5173'
   // https://localhop.netlify.app/
-  origin: 'https://localhop.netlify.app/',
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: ' https://localhop.netlify.app',
+  allowedHeaders: [ 'Content-Type', 'Authorization'],
   credentials: true               // ✅ allow cookies to be sent
 }));
 
