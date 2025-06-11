@@ -20,6 +20,7 @@ const app = express();
 app.use(cors({
   // 'http://localhost:5173'
   // https://localhop.netlify.app/
+  // origin: ' http://localhost:5173',
   origin: ' https://localhop.netlify.app',
   allowedHeaders: [ 'Content-Type', 'Authorization'],
   credentials: true               // ✅ allow cookies to be sent
